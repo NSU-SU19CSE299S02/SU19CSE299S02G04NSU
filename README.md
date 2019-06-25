@@ -36,3 +36,28 @@ How would our product solve the problem?
 	•	Easy Payment, they can pay their money through online payment option.
 	•	Finding location, they can locate the store location by using Mapping.
 	•	Request their product to exit. (Product will be delivered Physically).
+
+Features:
+	1.	Checking the Store Location.
+	2.	Checking the available Seat.
+	3.	Booking.
+	4.	Online payment.
+	5.	Balance check (If you have already stored any product).
+	6.	Information about the store.
+	7.	Help for any query. (Optional)
+
+Technology:
+	•	Android studio to build the app.
+	•	Online payment methods.
+	•	Google map for precise location.
+
+Monetization/Business plan:
+	•	First of all, we have to go to the local stores to introduce this app and get necessary feedback.
+	•	Then determine the necessary changes according to their wills.
+	•	Introduce the app to the small businessmen who are willing to store their products.
+	•	Make the changes and get more feedbacks from the local stores and the customers.
+	•	If the app is helpful for them, then are they willing to give some donations.
+	•	Introduce the app through ads and apply other marketing strategies.
+	•	Introduce the app to the Play Store.
+	•	Give the users some offers at first use of this product and also the users who are frequently using this app.
+	•	Make sure the app is available and trustworthy.
