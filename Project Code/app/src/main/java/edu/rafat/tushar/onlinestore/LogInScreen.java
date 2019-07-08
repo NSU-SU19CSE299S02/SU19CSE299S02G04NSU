@@ -21,5 +21,6 @@ public class LogInScreen extends AppCompatActivity {
                 //Activity
             }
         });
+        getSupportActionBar().setTitle("Login Form");
     }
 }
