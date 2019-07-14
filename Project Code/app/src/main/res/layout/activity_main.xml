@@ -1,24 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@color/SeaGreen">
 
-    <Button
-        android:id="@+id/homeBtn"
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="241dp"
+        android:src="@drawable/w">
+
+    <TextView
+        android:outlineAmbientShadowColor="@color/LightSlateGray"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="10dp"
+        android:capitalize="none"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:outlineProvider="paddedBounds"
+        android:text="Searching"
+        android:textColor="@color/Black"
+        android:textSize="22sp" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="180dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/circle"
+            android:padding="5dp"
+            android:text="Profile"
+            android:textAllCaps="false"
+            android:textColor="@color/Black"
+            android:textSize="27dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="180dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/circle"
+            android:padding="5dp"
+            android:text="Booking"
+            android:textAllCaps="false"
+            android:textColor="@color/Black"
+            android:textSize="27dp" />
+        <Button
+            android:layout_width="180dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/circle"
+            android:padding="5dp"
+            android:text="History"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            android:textAllCaps="false"
+            android:textColor="@color/Black"
+            android:textSize="27dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="180dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/circle"
+            android:padding="5dp"
+            android:text="Tracking"
+            android:textAllCaps="false"
+            android:textColor="@color/Black"
+            android:textSize="27dp" />
+
+        <Button
+            android:layout_width="180dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/circle"
+            android:padding="5dp"
+            android:text="Store info"
+            android:textAllCaps="false"
+            android:textColor="@color/Black"
+            android:textSize="27dp" />
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_marginLeft="6dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Home"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_marginTop="65dp"
+        android:text="Help Contact"
+        android:textColor="@color/Black"
+        android:textSize="20dp" />
+
+
+
+
+</LinearLayout>
