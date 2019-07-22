@@ -104,7 +104,8 @@
             android:text="Store info"
             android:textAllCaps="false"
             android:textColor="@color/Black"
-            android:textSize="27dp" />
+            android:textSize="27dp"
+            android:onClick="btn_storeInfo"/>
     </LinearLayout>
 
 
