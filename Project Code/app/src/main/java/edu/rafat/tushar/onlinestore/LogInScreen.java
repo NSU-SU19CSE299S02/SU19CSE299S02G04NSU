@@ -28,4 +28,8 @@ public class LogInScreen extends AppCompatActivity {
     public void btn_LogIn(View view) {
         startActivity(new Intent(getApplicationContext(),MainActivity.class));
     }
+
+    public void btn_signUp(View view) {
+        startActivity(new Intent(getApplicationContext(),SignUp.class));
+    }
 }
