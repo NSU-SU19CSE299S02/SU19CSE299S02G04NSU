@@ -43,7 +43,8 @@
             android:text="Profile"
             android:textAllCaps="false"
             android:textColor="@color/Black"
-            android:textSize="27dp" />
+            android:textSize="27dp"
+            android:onClick="btn_profile"/>
     </LinearLayout>
 
     <LinearLayout
