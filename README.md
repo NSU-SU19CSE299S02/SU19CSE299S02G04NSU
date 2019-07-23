@@ -2,28 +2,22 @@
 <img src="Documentation/NSU_Logo.jpg" width="300" height="300">
 </p>
 
- > > > > > > > > > ## Project Name: Online store booking investment
-  >  > > > > > > > > > > > > > >  Course name: Junior design
- 
-  > > > > > > > > > > >  > > > > > > Section: 02
- 
-  > > > > > > > > > > >  > > > > Semester: Summer 2019
- 
-  > > > > > > > > > > >  > >  Faculty name: Shaikh Shawon Arefin Shimon
- 
-  > > > > > > > > > > >  > > > > > > **Member:**
- 
- > > > > > > > > > > >  > > > >   Name: Md. Nuruzzaman
-  > > > > > > > > > > >  > > > > > > ID: 1621557042
-  
-  > > > > > > > > > > >  > > > Email: nuruzzaman@northsouth.edu
- 
- > > > > > > > > > > >  > > > > Name: Rafat Rahman Tushar
-> > > > > > > > > > >  > > > > > >  ID: 1621450042
-
-   > > > > > > > > > > >  > > >Email: rafat.tushar@northsouth.edu
- 
- > > > > > > > > >  >  > > > > > > Date: 11th June, 2019
+<h2 align="center">Project Name: Online store booking investment</h2>
+<p align="center">
+ Course Name: Junior Design<br>
+ Section: 02<br>
+ Semester: Summer 2019<br>
+ Faculty Name: Shaikh Shawon Arefin Shimon<br><br>
+ <b>Group No: 04</b><br>
+ <b>Member:</b><br>
+ Name: Md. Nuruzzaman<br>
+ ID: 1621557042<br>
+ Email: <a href="mailto:nuruzzaman@northsouth.edu">nuruzzaman@northsouth.edu</a><br><br>
+ Name: Rafat Rahman Tushar<br>
+ ID: 1621450042<br>
+ Email: <a href="mailto:rafat.tushar@northsouth.edu">rafat.tushar@northsouth.edu</a><br><br>
+ GitHub repository link: https://github.com/rafattu5har/SU19CSE299S02G04NSU<br>
+ Date: 11th June, 2019<br></p>
  
  
  ## Project Idea:
@@ -35,7 +29,7 @@ At earlier stage, people stored their products that uses paperwork and hard-copy
 We are trying to solve the problem and make it easy for user and also for the manager of the store. And also, for easy payment we are using online payment method. As all the information is in the app, so people can find the information of their products easily.
 
 
-## What problem are we trying to solve?**
+## What problem are we trying to solve?
 
 - Many small businesses have to store their products. But due to their lake of space, storing their products becomes more difficult. 
 - Many stores have the ability to store others products. But their locations are not known to everybody who are willing to store.
