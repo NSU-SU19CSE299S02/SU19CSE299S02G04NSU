@@ -1,125 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical"
-    android:background="@color/SeaGreen">
-
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="241dp"
-        android:src="@drawable/w">
-
-    <TextView
-        android:outlineAmbientShadowColor="@color/LightSlateGray"
-        android:layout_width="match_parent"
-        android:layout_height="62dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginBottom="10dp"
-        android:capitalize="none"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
-        android:outlineProvider="paddedBounds"
-        android:text="Searching"
-        android:textColor="@color/Black"
-        android:textSize="22sp" />
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <Button
-            android:layout_width="180dp"
-            android:layout_height="60dp"
-            android:layout_marginLeft="110dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="10dp"
-            android:background="@drawable/circle"
-            android:padding="5dp"
-            android:text="Profile"
-            android:textAllCaps="false"
-            android:textColor="@color/Black"
-            android:textSize="27dp"
-            android:onClick="btn_profile"/>
-    </LinearLayout>
+    tools:context=".MainActivity">
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:orientation="vertical"
+        android:background="@color/SeaGreen">
 
-        <Button
-            android:layout_width="180dp"
-            android:layout_height="60dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
-            android:background="@drawable/circle"
-            android:padding="5dp"
-            android:text="Booking"
-            android:textAllCaps="false"
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="241dp"
+            android:src="@drawable/w"/>
+
+        <LinearLayout
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="180dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="110dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/circle"
+                android:padding="5dp"
+                android:text="Profile"
+                android:textAllCaps="false"
+                android:textColor="@color/Black"
+                android:textSize="27dp"
+                android:onClick="btn_profile"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="180dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/circle"
+                android:padding="5dp"
+                android:text="Booking"
+                android:textAllCaps="false"
+                android:textColor="@color/Black"
+                android:textSize="27dp" />
+            <Button
+                android:layout_width="180dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/circle"
+                android:padding="5dp"
+                android:text="History"
+                android:focusableInTouchMode="true"
+                android:focusable="true"
+                android:textAllCaps="false"
+                android:textColor="@color/Black"
+                android:textSize="27dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="180dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/circle"
+                android:padding="5dp"
+                android:text="Tracking"
+                android:textAllCaps="false"
+                android:textColor="@color/Black"
+                android:textSize="27dp" />
+
+            <Button
+                android:layout_width="180dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/circle"
+                android:padding="5dp"
+                android:text="Store info"
+                android:textAllCaps="false"
+                android:textColor="@color/Black"
+                android:textSize="27dp"
+                android:onClick="btn_storeInfo"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_marginLeft="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="65dp"
+            android:text="Help Contact"
             android:textColor="@color/Black"
-            android:textSize="27dp" />
-        <Button
-            android:layout_width="180dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/circle"
-            android:padding="5dp"
-            android:text="History"
-            android:focusableInTouchMode="true"
-            android:focusable="true"
-            android:textAllCaps="false"
-            android:textColor="@color/Black"
-            android:textSize="27dp" />
+            android:textSize="20dp" />
     </LinearLayout>
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <Button
-            android:layout_width="180dp"
-            android:layout_height="60dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginRight="10dp"
-            android:background="@drawable/circle"
-            android:padding="5dp"
-            android:text="Tracking"
-            android:textAllCaps="false"
-            android:textColor="@color/Black"
-            android:textSize="27dp" />
-
-        <Button
-            android:layout_width="180dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/circle"
-            android:padding="5dp"
-            android:text="Store info"
-            android:textAllCaps="false"
-            android:textColor="@color/Black"
-            android:textSize="27dp"
-            android:onClick="btn_storeInfo"/>
-    </LinearLayout>
-
-
-    <TextView
-        android:layout_marginLeft="6dp"
+    <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="65dp"
-        android:text="Help Contact"
-        android:textColor="@color/Black"
-        android:textSize="20dp" />
+        android:layout_height="match_parent"
+        app:menu="@menu/navigation_menu"
+        android:layout_gravity="start">
+
+
+    </com.google.android.material.navigation.NavigationView>
 
 
 
-
-</LinearLayout>
+</androidx.drawerlayout.widget.DrawerLayout>
