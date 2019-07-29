@@ -13,23 +13,17 @@ public class LogInScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in_screen);
-
-        Button logInBtn = (Button) findViewById(R.id.logInBtn);
-
-        logInBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //Activity
-            }
-        });
-        getSupportActionBar().setTitle("Login Form");
     }
 
-    public void btn_LogIn(View view) {
-        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+    public void btn_forgotPassword(View view) {
+        startActivity(new Intent(getApplicationContext(),PasswordRecovery.class));
     }
 
-    public void btn_signUp(View view) {
+    public void btn_Signup(View view) {
         startActivity(new Intent(getApplicationContext(),SignUp.class));
+    }
+
+    public void btn_login(View view) {
+        startActivity(new Intent(getApplicationContext(),MainActivity.class));
     }
 }
