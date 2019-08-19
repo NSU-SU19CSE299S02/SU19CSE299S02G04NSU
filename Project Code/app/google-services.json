@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "50919709330",
+    "firebase_url": "https://cse299-65b02.firebaseio.com",
+    "project_id": "cse299-65b02",
+    "storage_bucket": "cse299-65b02.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:50919709330:android:8dceed4c962ab5cc",
+        "android_client_info": {
+          "package_name": "edu.rafat.tushar.onlinestore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "50919709330-suvk3gidomqh14fjhd3ljevi2sp436rl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "edu.rafat.tushar.onlinestore",
+            "certificate_hash": "394635891cb7ca807b88165fe9b7316a5f4fa1a7"
+          }
+        },
+        {
+          "client_id": "50919709330-mvs9guouhi8uhf073kvnbom27phk4vnq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyfFUR3qkakfo6UHCg4PxsWaXZso_qdU4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "50919709330-mvs9guouhi8uhf073kvnbom27phk4vnq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
