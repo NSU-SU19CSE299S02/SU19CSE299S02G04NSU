@@ -126,7 +126,7 @@ public class LogInScreen extends AppCompatActivity implements View.OnClickListen
                 if(task.isSuccessful())
                 {
                     finish();
-                    Intent UserBusiness = new Intent(getApplicationContext(), ProfileScreen.class);
+                    Intent UserBusiness = new Intent(getApplicationContext(), MainActivity.class);
                     UserBusiness.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(UserBusiness);
                 }

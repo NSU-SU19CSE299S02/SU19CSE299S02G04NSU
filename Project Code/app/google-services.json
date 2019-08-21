@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "50919709330-101e55cg3005g35nk8a6rkhvknm2vkt4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "edu.rafat.tushar.onlinestore",
+            "certificate_hash": "bc760d2f96f6a64d719b8477bfff2d869c7706bd"
+          }
+        },
+        {
           "client_id": "50919709330-suvk3gidomqh14fjhd3ljevi2sp436rl.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
