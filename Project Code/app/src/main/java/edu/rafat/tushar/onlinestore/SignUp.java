@@ -20,11 +20,10 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class SignUp extends AppCompatActivity implements View.OnClickListener{
 
-    private EditText FullNameEditText, UserNameEditText, EmailEditText,
-            ConfirmEmailEditText, PasswordEditText,ConfirmPasswordEditText;
+    private EditText FullNameEditText, UserNameEditText, EmailEditText, ConfirmEmailEditText, PasswordEditText,ConfirmPasswordEditText;
     private Button Register_button;
     private FirebaseAuth mAuth;
-    private ProgressBar progressBar;
+    private ProgressBar signUpProgressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +32,9 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener{
         this.setTitle("Sign Up");
 
         mAuth = FirebaseAuth.getInstance();
-        progressBar = (ProgressBar) findViewById(R.id.progressbarId);
+
+        signUpProgressBar = (ProgressBar) findViewById(R.id.signUpSUProgressBar);
+        Register_button = (Button) findViewById(R.id.Register_button);
 
        // FullNameEditText = findViewById(R.id.FullNameEditText);
         //UserNameEditText = findViewById(R.id.UserNameEditText);
@@ -95,12 +96,12 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener{
             PasswordEditText.requestFocus();
             return;
         }
-        progressBar.setVisibility(View.VISIBLE);
+        signUpProgressBar.setVisibility(View.VISIBLE);
 
         mAuth.createUserWithEmailAndPassword(Email,Pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-                progressBar.setVisibility(View.GONE);
+                signUpProgressBar.setVisibility(View.GONE);
                 if (task.isSuccessful()) {
                     Toast.makeText(getApplicationContext(), "Register is successful", Toast.LENGTH_SHORT).show();
 
@@ -110,7 +111,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener{
                 }
 
             }
-        })
+        });
 
 
 
