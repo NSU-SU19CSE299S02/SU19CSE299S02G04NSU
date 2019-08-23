@@ -1,164 +1,208 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="30dp"
-    tools:context=".SignUp"
-    android:background="@color/BackGround">
+    tools:context=".SignUp">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_marginTop="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:focusableInTouchMode="true"
-        android:focusable="true"
-        android:textColorHint="@color/CadetBlue">
+    <EditText
+        android:id="@+id/passwordSUEditText"
+        android:layout_width="275dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/FullNameEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Full Name"
-            android:inputType="text"
-            android:textSize="15sp" />
-    </com.google.android.material.textfield.TextInputLayout>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/fullNameSUEditText"
+        app:layout_constraintVertical_bias="0.57" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_marginTop="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:focusableInTouchMode="true"
-        android:focusable="true"
-        android:textColorHint="@color/CadetBlue">
+    <EditText
+        android:id="@+id/fullNameSUEditText"
+        android:layout_width="275dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="Full Name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.081" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/UserNameEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="User Name"
-            android:inputType="text"
-            android:textSize="15sp" />
-    </com.google.android.material.textfield.TextInputLayout>
+    <EditText
+        android:id="@+id/locationSUEditText"
+        android:layout_width="275dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="Location"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/fullNameSUEditText"
+        app:layout_constraintVertical_bias="0.355" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_marginTop="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:focusableInTouchMode="true"
-        android:focusable="true"
-        android:textColorHint="@color/CadetBlue">
+    <EditText
+        android:id="@+id/emailSUEditText"
+        android:layout_width="275dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:hint="Email address"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/fullNameSUEditText"
+        app:layout_constraintVertical_bias="0.09" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/EmailEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Email"
-            android:inputType="text"
-            android:textSize="15sp" />
-    </com.google.android.material.textfield.TextInputLayout>
+    <EditText
+        android:id="@+id/phnNoSUEditText"
+        android:layout_width="275dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="Phone No."
+        android:inputType="number|text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fullNameSUEditText"
+        app:layout_constraintVertical_bias="0.436" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_marginTop="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:focusableInTouchMode="true"
-        android:focusable="true"
-        android:textColorHint="@color/CadetBlue">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/ConfirmEmailEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Confirm Email"
-            android:inputType="text"
-            android:textSize="15sp" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_marginTop="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:focusableInTouchMode="true"
-        android:focusable="true"
-        android:textColorHint="@color/CadetBlue">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/PasswordEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Password"
-            android:inputType="text"
-            android:textSize="15sp" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_marginTop="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:focusableInTouchMode="true"
-        android:focusable="true"
-        android:textColorHint="@color/CadetBlue">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/ConfirmPasswordEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Confirm Password"
-            android:inputType="text"
-            android:textSize="15sp" />
-    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:id="@+id/genderSUTextView"
+        android:layout_width="78dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Gender:"
+        android:textColor="#009688"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.189"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fullNameSUEditText"
+        app:layout_constraintVertical_bias="0.123" />
 
     <RadioGroup
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="10sp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Gender:"
-            android:textSize="20sp" />
+        android:id="@+id/genderSURadioGroup"
+        android:layout_width="90dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.037"
+        app:layout_constraintStart_toEndOf="@+id/genderSUTextView"
+        app:layout_constraintTop_toBottomOf="@+id/fullNameSUEditText"
+        app:layout_constraintVertical_bias="0.131">
 
         <RadioButton
-            android:id="@+id/MaleEditText"
+            android:id="@+id/maleGRadioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10sp"
-            android:layout_marginRight="10sp"
-            android:text="Male"
-            android:textSize="20sp" />
+            android:layout_weight="1"
+            android:text="Male" />
 
         <RadioButton
-            android:id="@+id/FemaleEditText"
+            android:id="@+id/femaleGRadioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Female"
-            android:textSize="20sp" />
+            android:layout_weight="1"
+            android:text="Female" />
     </RadioGroup>
 
     <Button
-        android:id="@+id/Register_button"
-        android:layout_width="match_parent"
+        android:id="@+id/signUpSUBtn"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:background="@drawable/button_rounded"
-        android:text="Register"
-        android:textColorHint="@color/Black"
-        android:textSize="22sp" />
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Sign Up"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.833"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fullNameSUEditText"
+        app:layout_constraintVertical_bias="0.787" />
 
     <ProgressBar
-        android:id="@+id/signUpSUProgressBar"
+        android:id="@+id/signUpProgressBar"
         style="?android:attr/progressBarStyle"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="gone" />
-</LinearLayout>
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.388" />
+
+    <TextView
+        android:id="@+id/signInSUEextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Already have an Account?"
+        android:textColor="#F44336"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/signUpSUBtn"
+        app:layout_constraintHorizontal_bias="0.682"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fullNameSUEditText"
+        app:layout_constraintVertical_bias="0.776" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

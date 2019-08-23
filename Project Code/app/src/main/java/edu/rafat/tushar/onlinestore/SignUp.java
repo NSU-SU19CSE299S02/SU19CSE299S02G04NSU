@@ -3,6 +3,7 @@ package edu.rafat.tushar.onlinestore;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.Patterns;
@@ -10,111 +11,179 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class SignUp extends AppCompatActivity implements View.OnClickListener{
 
-    private EditText FullNameEditText, UserNameEditText, EmailEditText, ConfirmEmailEditText, PasswordEditText,ConfirmPasswordEditText;
-    private Button Register_button;
-    private FirebaseAuth mAuth;
-    private ProgressBar signUpProgressBar;
+    private EditText fullNameSUEditText, emailSUEditText, passSUEditText, locationSUEditText, phnNoSuEditText; //Create EditText objects
+    private Button signUpSUBtn; // Create Button Object
+    private TextView signInSUTextView ; //Create TextView Object
+    private ProgressBar progressBarSUProgressBar; // Create ProgressBar object
 
+    private RadioButton genderSuRadioButton;
+    private RadioGroup genderSURadioGroup;
+
+
+    //add firebase database stuff
+    private FirebaseAuth mAuth; // Create FireBase object for Authentication
+    private FirebaseAuth.AuthStateListener mAuthListener;
+    private FirebaseDatabase mFirebaseDatabase;
+    private DatabaseReference myRef;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
         this.setTitle("Sign Up");
 
-        mAuth = FirebaseAuth.getInstance();
+        mAuth = FirebaseAuth.getInstance();// mAuth comment
+        mFirebaseDatabase = FirebaseDatabase.getInstance();
 
-        signUpProgressBar = (ProgressBar) findViewById(R.id.signUpSUProgressBar);
-        Register_button = (Button) findViewById(R.id.Register_button);
 
-       // FullNameEditText = findViewById(R.id.FullNameEditText);
-        //UserNameEditText = findViewById(R.id.UserNameEditText);
-        EmailEditText = findViewById(R.id.EmailEditText);
-        //ConfirmEmailEditText = findViewById(R.id.ConfirmEmailEditText);
-        PasswordEditText = findViewById(R.id.PasswordEditText);
-        //ConfirmPasswordEditText = findViewById(R.id.ConfirmPasswordEditText);
+        // Initialize EditText Objects
+        fullNameSUEditText = (EditText) findViewById(R.id.fullNameSUEditText);
+        emailSUEditText = (EditText) findViewById(R.id.emailSUEditText);
+        passSUEditText = (EditText) findViewById(R.id.passwordSUEditText);
+        phnNoSuEditText = (EditText) findViewById(R.id.phnNoSUEditText);
+        locationSUEditText = (EditText) findViewById(R.id.locationSUEditText);
 
-        Register_button.setOnClickListener(this);
+        // Initialize RadioButton objects
+        genderSURadioGroup = (RadioGroup) findViewById(R.id.genderSURadioGroup);
+
+
+        // initialize Button Objetc
+        signUpSUBtn = (Button) findViewById(R.id.signUpSUBtn);
+        // Initialize ProgressBar Object
+        progressBarSUProgressBar = (ProgressBar) findViewById(R.id.signUpProgressBar);
+        // Initialize TextView objetcs
+        signInSUTextView = (TextView) findViewById(R.id.signInSUEextView);
+
+        // Declare on click listener to some specific objects
+        signUpSUBtn.setOnClickListener(this);
+        signInSUTextView.setOnClickListener(this);
+
 
 
     }
 
     @Override
-    public void onClick(View view) {
-        switch(view.getId())
+    public void onClick(View view)
+    {
+        switch (view.getId())
         {
-            case R.id.Register_button:
-                UserRegister();
+            case R.id.signUpSUBtn:
+                userRegister();
                 break;
 
+            case R.id.signInSUEextView:
+                Intent signIn = new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(signIn);
+                break;
         }
-
     }
+    /**
+     * userRegister method create a user in FIREBASE database Existing API
+     *
+     * This is a method of SignUp class that is build to only create a sign up authentication in FireBase cloud server
+     * @param takes no parameter as input. Uses emailEditText and passwordEditText as default inputs
+     * @return void type return
+     */
+    private void userRegister()
+    {
+        String email, password; // String types Email and Password variables
 
-    private void UserRegister() {
-       // String FName = FullNameEditText.getText().toString().trim();
-      //  String UName = UserNameEditText.getText().toString().trim();
-        String Email = EmailEditText.getText().toString().trim();
-        //String CEmail = ConfirmEmailEditText.getText().toString().trim();
-        String Pass = PasswordEditText.getText().toString().trim();
-      //  String CPass = ConfirmPasswordEditText.getText().toString().trim();
+        email = emailSUEditText.getText().toString().trim();
+        password = passSUEditText.getText().toString().trim();
 
-
-        if(Email.isEmpty())
+        //checking the validity of the email
+        if(email.isEmpty())
         {
-            EmailEditText.setError("Enter an email address");
-            EmailEditText.requestFocus();
+            emailSUEditText.setError("Enter an email address");
+            emailSUEditText.requestFocus();
             return;
         }
 
-        if(!android.util.Patterns.EMAIL_ADDRESS.matcher(Email).matches())
+        if(!Patterns.EMAIL_ADDRESS.matcher(email).matches())
         {
-            EmailEditText.setError("Enter a valid email address");
-            EmailEditText.requestFocus();
+            emailSUEditText.setError("Enter a valid email address");
+            emailSUEditText.requestFocus();
             return;
         }
 
-        if(Pass.isEmpty())
+        //checking the validity of the password
+        if(password.isEmpty())
         {
-            PasswordEditText.setError("Enter a password");
-            PasswordEditText.requestFocus();
+            passSUEditText.setError("Enter a password");
+            passSUEditText.requestFocus();
             return;
         }
 
-        if(Pass.length()<6)
+        if(password.length()<6)
         {
-            PasswordEditText.setError("Minimum length of the password should be 6");
-            PasswordEditText.requestFocus();
+            passSUEditText.setError("Password should be at least 6 character long");
+            passSUEditText.requestFocus();
             return;
         }
-        signUpProgressBar.setVisibility(View.VISIBLE);
 
-        mAuth.createUserWithEmailAndPassword(Email,Pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+        progressBarSUProgressBar.setVisibility(View.VISIBLE);
+
+        mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>()
+        {
             @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                signUpProgressBar.setVisibility(View.GONE);
+            public void onComplete(@NonNull Task<AuthResult> task)
+            {
+                progressBarSUProgressBar.setVisibility(View.GONE);
                 if (task.isSuccessful()) {
-                    Toast.makeText(getApplicationContext(), "Register is successful", Toast.LENGTH_SHORT).show();
-
-                } else {
-                    Toast.makeText(getApplicationContext(), "Register is not successful", Toast.LENGTH_SHORT).show();
-
+                    // Sign in success, update UI with the signed-in user's information
+                    addDataToDB();// adding other user information to realtime database
+                    Toast.makeText(getApplicationContext(), "Register is Successfull", Toast.LENGTH_SHORT).show();
                 }
-
+                else
+                {
+                    //Give Toast message with the email that already exist
+                    if (task.getException() instanceof FirebaseAuthUserCollisionException) {
+                        Toast.makeText(getApplicationContext(), "User with this email already have an account", Toast.LENGTH_SHORT).show();
+                    }
+                    //Give Toast message task is randomly is not successfull
+                    else {
+                        Toast.makeText(getApplicationContext(), "Error: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                }
             }
+
+
         });
 
+    }
 
+    /**
+     * Call this method when need to add data to firebase realtime databse
+     * @param null takes no parameter
+     */
+    private void addDataToDB()
+    {
+        myRef = mFirebaseDatabase.getReference("customerid");
+        //Check which radio gender button checked
+        genderSuRadioButton = (RadioButton) findViewById(genderSURadioGroup.getCheckedRadioButtonId());
+        //Create and declare object of CustomerId
+        CustomerId customer = new CustomerId(fullNameSUEditText.getText().toString(),emailSUEditText.getText().toString(), genderSuRadioButton.getText().toString(), locationSUEditText.getText().toString(), phnNoSuEditText.getText().toString());
+        FirebaseUser userId = mAuth.getCurrentUser();
+        String user = userId.getUid();
+        myRef.child(user).setValue(customer);
+        Toast.makeText(getApplicationContext(),"User Info Added",Toast.LENGTH_LONG).show();
 
 
     }
+
 }
