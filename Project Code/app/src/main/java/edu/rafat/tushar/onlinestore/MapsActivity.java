@@ -3,6 +3,9 @@ package edu.rafat.tushar.onlinestore;
 import androidx.fragment.app.FragmentActivity;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -43,5 +46,33 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         LatLng northSouthUniversity = new LatLng(23.815181, 90.425592);
         mMap.addMarker(new MarkerOptions().position(northSouthUniversity).title("Marker in North South University"));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(northSouthUniversity, 17F));
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.map_options, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Change the map type based on the user's selection.
+        switch (item.getItemId()) {
+            case R.id.normal_map:
+                mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+                return true;
+            case R.id.hybrid_map:
+                mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+                return true;
+            case R.id.satellite_map:
+                mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+                return true;
+            case R.id.terrain_map:
+                mMap.setMapType(GoogleMap.MAP_TYPE_TERRAIN);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }
