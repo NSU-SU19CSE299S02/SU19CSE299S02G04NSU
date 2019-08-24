@@ -30,7 +30,7 @@ public class Payment_form extends AppCompatActivity {
             @Override
             public void onClick(Card card) {
 
-                Toast.makeText(Payment_form.this, "Name:", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Payment_form.this, "Name:"+card.getName()+" Last 4 digits:"+card.getLast4(), Toast.LENGTH_SHORT).show();
             }
         });
 
