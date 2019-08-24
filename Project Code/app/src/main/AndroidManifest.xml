@@ -25,6 +25,7 @@
         -->
         <activity
             android:name=".MapsActivity"
+
             android:label="@string/title_activity_maps"></activity>
 
         <activity android:name=".StoreInfo" />
@@ -32,7 +33,7 @@
         <activity android:name=".PasswordRecovery" />
         <activity android:name=".MainActivity" />
         <activity android:name=".SignUp" />
-        <activity android:name=".LogInScreen">
+        <activity android:name=".MapsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

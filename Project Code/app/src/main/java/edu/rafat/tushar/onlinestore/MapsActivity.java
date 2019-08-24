@@ -1,5 +1,6 @@
 package edu.rafat.tushar.onlinestore;
 
+
 import androidx.fragment.app.FragmentActivity;
 
 import android.os.Bundle;
@@ -23,6 +24,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
     }
 
 
@@ -48,3 +50,4 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
 }
+
