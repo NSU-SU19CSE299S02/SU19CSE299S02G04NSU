@@ -82,3 +82,37 @@ Accept payment anytime, Anywhere
 -  Master Card, Visa Card  ( Credit cards )
 - Bkash, Ucash, Rocket ( Accept payments from customers using mobile devices )
 - Other Cards. ( May be in next version update )
+
+## PROJECT FEATURES :
+As this is a online Store booking app so this project contains some basic Feature of booking products. Such as search a online store for storing the products.
+
+## Login screen:
+- Whenever a user completes registration he can successfully login now, he can log in to his id just by using his email address and password which he used to register in the app. Before login the app you have to create your account.
+
+<p align="center">
+<img src="Documentation/Login.png" width="230" height="310">
+</p>
+
+## User Registration:
+- If a user clicks on create account link which is available in the bottom of the login screen it will redirect him to a form where he can be registered as a member of that Application by providing his username, email, location, mobile number and password. Then needs to complete the email verification via email by login to his email which he provides during registration.
+
+<p align="center">
+<img src="Documentation/SignUp.png" width="230" height="310">
+</p>
+
+## Password Recovery:
+- There is also an option ‘Forget Password’ If a user forgets his password he can click the forget password link and by providing the same mail an reset password link will be sent to his email by which he can recover his id again by a new password
+
+<p align="center">
+<img src="Documentation/Password_Recovery.png" width="230" height="310">
+</p>
+
+## Built With
+ - [Google Map](https://map.google.com/)
+ - [Firestore](https://firebase.google.com/)
+ 
+## License:
+- [MIT License](https://github.com/rafattu5har/SU19CSE299S02G04NSU/blob/master/LICENSE) 
+
+ ## Credits
+ Made by [Rafat Rahman Tushar](https://github.com/rafattu5har) and [Md. Nuruzzaman](https://github.com/SHAN2288)
