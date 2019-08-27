@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    Button trackintBtn;
+    Button trackintBtn, bookingBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         trackintBtn = (Button) findViewById(R.id.trackingBtn);
+        bookingBtn = (Button) findViewById(R.id.bookingBtn);
 
         trackintBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,4 +35,9 @@ public class MainActivity extends AppCompatActivity {
     public void btn_profile(View view) {
         startActivity(new Intent(getApplicationContext(),ProfileScreen.class));
     }
+    public void setBookingBtn(View view) {
+        startActivity(new Intent(getApplicationContext(),StoreList.class));
+    }
+
+
 }

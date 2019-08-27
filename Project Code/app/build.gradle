@@ -36,5 +36,5 @@ dependencies {
     implementation 'com.google.android.material:material:1.0.0'
 
     //Add Library
-    compile 'com.craftman.cardform:cardform:0.0.2'
+    implementation 'com.craftman.cardform:cardform:0.0.2'
 }
